@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Tukas Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="./Project.css">
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+        
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <!--Breaks inserted to add space between navbar and the first heading-->
+        <br>
+        <br>
+
+        <!--Background video-->
+        <div id="Home">
+            <video autoplay muted loop id="Typing_Video">
+                <source src="./content/flowers.mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!--Video text-->
+        <div class="Video_Text">
+            <h1 class="white-text">Tuka's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>The computer programmer is a creator of universes for which he alone is the lawgiver.
+                        <br>No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
+                        <br>field of battle and to command such unswervingly dutiful actors or troops.
+                    </q>
+                    <br> -Joseph Weizenbaum
+                    <br>
+                    <br> My name is Tuka. Welcome to my portfolio website!
+                    <br>
+                    <br> Thank you for stopping by and enjoy! 
+                </p>
+            </strong>
+        </div>
+
+
+        <!--SlideShow-->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <!--Slide1-->
+                    <div class="mySlides">
+                        <img class="Slideshow_Images" src="./content/me.JPG" alt="picture of tuka" id="me">
+                        <div class="text">Hi! Nice to meet you!</div>
+                    </div>
+                    <!--Slide2-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./content/computer.jpg" alt="fun" id="code">
+                        <div class="text">Coding is super fun!</div>
+                    </div>
+                    <!--Slide3-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./content/code.jpg" alt="daytoday" id="comp">
+                        <div class="text">Been practicing hard!</div>
+                    </div>
+                    <!--Slide4-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./content/excited.jpg" alt="excited" id="girl">
+                        <div class="text">I'm excited for you to see my projects!!</div>
+                    </div>
+                    <!--Previous and next buttons-->
+                    <a class="Previous" onclick="plusSlides(-1)" >&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)" >&#10095;</a>
+                </div>
+                <br>
+
+                <!--Slideshow Dots-->
+                <div style="text-align: center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+
+        <!--About section-->
+        <div class="Row" id="About">
+            <!--Left column-->
+            <div class="Column_2">
+                <img src="./content/Aboutmee.jpg" alt="All about me">
+            </div>
+            <!--Right column-->
+            <div class="Column_1">
+                <h1>Who is Tuka?</h1>
+                <p>
+                    I am a software developer girl who loves to code! I'm also a gamer and I love to travel and crochet! 
+                    <br>
+                    <br>I am a graduate of The Academy of Learning Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.  I also graduated from MIT with full-stack development certificate!
+                    <br>
+                    <br>I am a full-stack developer and would love the opportunity to work with you! <a href="#Contact">Contact</a> me below!
+                </p>
+            </div>
+        </div>
+
+        <!--GitHub section-->
+        <div class="Row" id="GitHub">
+            <!--Left column-->
+            <div class="Column_1">
+                <h2>Skills</h2>
+            <ul>
+                <li>C#</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>SQL</li>
+                <!-- Add more skills as needed -->
+            </ul>
+                <h2>GitHub</h2>
+                <p>
+                    You can view my projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/taraibi" target="_blank">Tukas Github</a></p>
+                </p>
+            </div>
+            <!--Right column-->
+
+            <div class="Column_2">
+                <a href="https://github.com/taraibi" target="_blank"><img src="./content/github.jpg" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+    
+        
+        
+
+        <!--Contact section-->
+      <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">Contact me</button>
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
+                <h1>Contact</h1>
+                <label for ="name"><b>Name</b></label>
+                <input type="text" placeholder="Type your name here" name="name" required>
+                <label for ="phone"><b>Phone</b></label>
+                <input type="text" placeholder="Type your phone number here" name="phone">
+                <label for ="email"><b>Email</b></label>
+                <input type="text" placeholder="Type your email address here" name="email" required>
+                <label for ="message"><b>Message</b></label>
+                <input type="text" placeholder="Type your message here" name="message">
+
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
+      </div>
+
+        <!--Footer section-->
+        <footer>
+            <p class="center">&copy Academy of Learning, <a href="https://myaolcc.com/" target="_blank">Academy of Learning</a></p><br>
+        </footer>
+        <script src="./Portfolio.js"></script>
+    </body>
+</html>
